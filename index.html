@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shree Siddhi Vinayak Events – We Decorate Memories</title>
+  <meta name="description" content="Premium event decoration in Dombivali. Birthday, Baby Shower, Engagement, Wedding, Corporate Events. Call 8433781436." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --burgundy: #6D1F2B;
+      --burgundy-dark: #4A1219;
+      --burgundy-light: #8B2737;
+      --gold: #C89B3C;
+      --gold-light: #D4AF5A;
+      --gold-pale: #F0E0B0;
+      --ivory: #FFF8F0;
+      --ivory-dark: #F5EDE0;
+      --blush: #F7D6D9;
+      --blush-deep: #E8B4B8;
+      --charcoal: #2E2E2E;
+      --charcoal-light: #5A5A5A;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAVBAR ─── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(255,248,240,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,155,60,0.2);
+      transition: all 0.3s ease;
+    }
+    .navbar.scrolled {
+      box-shadow: 0 4px 30px rgba(109,31,43,0.1);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--burgundy), var(--burgundy-dark));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; color: var(--gold);
+      box-shadow: 0 2px 12px rgba(109,31,43,0.3);
+    }
+    .nav-logo-text { line-height: 1.1; }
+    .nav-logo-text .brand { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: var(--burgundy); letter-spacing: 0.02em; }
+    .nav-logo-text .tagline { font-size: 10px; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .nav-links {
+      display: flex; gap: 28px; list-style: none; align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none; font-size: 13px; font-weight: 500;
+      color: var(--charcoal); letter-spacing: 0.03em;
+      transition: color 0.2s; padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover { color: var(--burgundy); border-bottom-color: var(--gold); }
+
+    .nav-cta {
+      background: var(--burgundy);
+      color: var(--white) !important;
+      padding: 10px 20px !important;
+      border-radius: 50px;
+      font-size: 13px !important;
+      border-bottom: none !important;
+      transition: background 0.2s, transform 0.2s !important;
+      text-decoration: none;
+    }
+    .nav-cta:hover { background: var(--burgundy-dark) !important; transform: translateY(-1px); }
+
+    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--burgundy); border-radius: 2px; transition: all 0.3s; }
+
+    .mobile-menu {
+      display: none; position: fixed; top: 72px; left: 0; right: 0;
+      background: var(--ivory); border-bottom: 1px solid var(--gold-pale);
+      padding: 16px 24px; flex-direction: column; gap: 16px; z-index: 999;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { text-decoration: none; color: var(--charcoal); font-size: 15px; font-weight: 500; padding: 8px 0; border-bottom: 1px solid var(--ivory-dark); }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh; padding-top: 72px;
+      background: linear-gradient(165deg, var(--burgundy-dark) 0%, var(--burgundy) 40%, #9B3040 70%, var(--burgundy-dark) 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero-bg-pattern {
+      position: absolute; inset: 0; opacity: 0.06;
+      background-image: radial-gradient(circle at 25% 25%, var(--gold) 0%, transparent 50%),
+                        radial-gradient(circle at 75% 75%, var(--gold) 0%, transparent 50%);
+    }
+    .hero-orbs {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .orb {
+      position: absolute; border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,155,60,0.15), transparent 70%);
+      animation: float 8s ease-in-out infinite;
+    }
+    .orb-1 { width: 500px; height: 500px; top: -100px; right: -100px; animation-delay: 0s; }
+    .orb-2 { width: 300px; height: 300px; bottom: -50px; left: -50px; animation-delay: 3s; }
+    .orb-3 { width: 200px; height: 200px; top: 40%; left: 30%; animation-delay: 5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-20px) scale(1.05); }
+    }
+
+    .hero-content {
+      max-width: 1200px; margin: 0 auto; padding: 80px 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+      position: relative; z-index: 2;
+    }
+
+    .hero-image-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(120deg, rgba(44,19,25,0.42) 0%, rgba(109,31,43,0.58) 100%);
+      pointer-events: none;
+      border-radius: 24px;
+    }
+
+    .hero-text .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(200,155,60,0.15); border: 1px solid rgba(200,155,60,0.3);
+      color: var(--gold-light); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 50px; margin-bottom: 24px;
+    }
+    .hero-text .eyebrow::before { content: '✦'; font-size: 8px; }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 5vw, 62px);
+      font-weight: 700; line-height: 1.1;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .hero-text h1 em {
+      font-style: italic; color: var(--gold-light);
+      display: block;
+    }
+    .hero-text .subhead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: rgba(255,255,255,0.7); margin-bottom: 32px;
+      font-style: italic; line-height: 1.5;
+    }
+
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+    .btn-primary {
+      background: var(--gold); color: var(--burgundy-dark);
+      padding: 16px 32px; border-radius: 50px;
+      text-decoration: none; font-weight: 700; font-size: 15px;
+      display: inline-flex; align-items: center; gap: 10px;
+      transition: all 0.3s; box-shadow: 0 4px 20px rgba(200,155,60,0.4);
+      letter-spacing: 0.02em;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,155,60,0.5); }
+
+    .btn-outline {
+      background: transparent; color: var(--white);
+      padding: 16px 32px; border-radius: 50px;
+      text-decoration: none; font-weight: 600; font-size: 15px;
+      display: inline-flex; align-items: center; gap: 10px;
+      border: 2px solid rgba(255,255,255,0.4);
+      transition: all 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); transform: translateY(-2px); }
+
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      background: rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden;
+    }
+    .stat {
+      background: rgba(255,255,255,0.06); padding: 20px 16px; text-align: center;
+      backdrop-filter: blur(4px);
+    }
+    .stat-number { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-light); line-height: 1; }
+    .stat-label { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+
+    .hero-visual {
+      position: relative; display: flex; align-items: center; justify-content: center;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.08); backdrop-filter: blur(20px);
+      border: 1px solid rgba(200,155,60,0.3);
+      border-radius: 24px; overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .hero-decoration-grid {
+      display: grid; grid-template-areas:
+        "main main"
+        "side1 side2";
+      grid-template-columns: 1fr 1fr; gap: 8px; padding: 4px;
+      position: relative;
+    }
+    .hero-main-img {
+      grid-area: main;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-side-img {
+      aspect-ratio: 3/4;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-side-img:first-of-type { grid-area: side1; }
+    .hero-side-img:last-of-type { grid-area: side2; }
+    /* ─── IMAGE HOVER ZOOM ─── */
+    .img-zoom {
+      transition: transform 0.32s cubic-bezier(.22,.61,.36,1), box-shadow 0.25s;
+      object-fit: cover;
+      border-radius: inherit;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .img-zoom:hover,
+    .service-img img:hover,
+    .gallery-item img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 32px rgba(109,31,43,0.13);
+    }
+    .hero-badge {
+      position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--burgundy-dark);
+      padding: 10px 24px; border-radius: 50px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      white-space: nowrap; box-shadow: 0 4px 20px rgba(200,155,60,0.4);
+    }
+
+    /* ─── SECTION COMMON ─── */
+    section { padding: 90px 24px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .section-label::before, .section-label::after { content: '—'; opacity: 0.5; }
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 46px);
+      font-weight: 700; color: var(--burgundy); line-height: 1.15; margin-bottom: 16px;
+    }
+    .section-sub {
+      font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--charcoal-light);
+      max-width: 520px; line-height: 1.6; font-style: italic;
+    }
+    .section-header { margin-bottom: 56px; }
+
+    /* ─── ABOUT ─── */
+    .about { background: var(--white); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-logo-display {
+      background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy));
+      border-radius: 20px; padding: 60px; text-align: center;
+      box-shadow: 0 20px 60px rgba(109,31,43,0.25);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px;
+    }
+    .about-logo-img {
+      width: 90px; height: 90px; border-radius: 16px; object-fit: contain;
+      margin-bottom: 16px;
+      background: #fff; box-shadow: 0 2px 12px rgba(109,31,43,0.10);
+      display: block;
+    }
+    .about-logo-name {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light); font-size: 28px; font-weight: 700; line-height: 1.1;
+    }
+    .about-logo-sub { color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 8px; }
+
+    .about-badge-row {
+      display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;
+    }
+    .about-badge {
+      background: var(--ivory); border: 1px solid var(--gold-pale);
+      padding: 8px 16px; border-radius: 50px; font-size: 12px; font-weight: 600;
+      color: var(--burgundy); display: flex; align-items: center; gap: 6px;
+    }
+
+    .about-text p {
+      font-size: 16px; line-height: 1.8; color: var(--charcoal-light); margin-bottom: 20px;
+    }
+    .about-pillars {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px;
+    }
+    .pillar {
+      background: var(--ivory); border-left: 3px solid var(--gold);
+      padding: 16px 20px; border-radius: 0 8px 8px 0;
+    }
+    .pillar-title { font-weight: 700; font-size: 14px; color: var(--burgundy); margin-bottom: 4px; }
+    .pillar-desc { font-size: 12px; color: var(--charcoal-light); line-height: 1.5; }
+
+    /* ─── EVENTS ─── */
+    .events { background: var(--ivory); }
+    .events-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px;
+    }
+    .event-chip {
+      background: var(--white); border: 1px solid var(--gold-pale);
+      border-radius: 16px; padding: 24px 16px; text-align: center;
+      transition: all 0.3s; cursor: default;
+      box-shadow: 0 2px 8px rgba(109,31,43,0.04);
+    }
+    .event-chip:hover {
+      border-color: var(--gold); background: var(--burgundy);
+      transform: translateY(-4px); box-shadow: 0 12px 30px rgba(109,31,43,0.2);
+    }
+    .event-chip:hover .chip-icon, .event-chip:hover .chip-name { color: var(--white); }
+    .event-chip:hover .chip-name { color: var(--gold-light); }
+    .chip-icon { font-size: 32px; display: block; margin-bottom: 10px; }
+    .chip-name { font-size: 13px; font-weight: 600; color: var(--burgundy); }
+
+    /* ─── SERVICES ─── */
+    .services { background: var(--ivory-dark); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
+      align-items: stretch;
+    }
+    .service-card {
+      background: var(--white); border-radius: 20px;
+      overflow: hidden; box-shadow: 0 4px 20px rgba(109,31,43,0.06);
+      transition: all 0.4s; border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .service-card:hover {
+      border-color: var(--gold-pale); transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(109,31,43,0.12);
+    }
+    .service-img {
+      height: 200px; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--blush), var(--ivory-dark), var(--gold-pale));
+    }
+    .service-img-bg {
+      display: none;
+    }
+    .service-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      border-radius: 0 0 16px 16px;
+      transition: transform 0.32s cubic-bezier(.22,.61,.36,1), box-shadow 0.25s;
+      display: block;
+    }
+    .service-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .service-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--burgundy); margin-bottom: 8px; }
+    .service-desc {
+      font-size: 13px; color: var(--charcoal-light);
+      margin-bottom: 20px;
+      min-height: 78px;
+      line-height: 1.6;
+    }
+    .service-tags {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+      min-height: 64px;
+      align-content: flex-start;
+    }
+    .service-tag { background: var(--blush); color: var(--burgundy); font-size: 11px; padding: 4px 10px; border-radius: 50px; font-weight: 500; }
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #25D366; color: var(--white);
+      padding: 12px 20px; border-radius: 50px;
+      text-decoration: none; font-size: 13px; font-weight: 700;
+      transition: all 0.2s; width: 100%; justify-content: center;
+      letter-spacing: 0.02em;
+      margin-top: auto;
+    }
+    .btn-wa:hover { background: #1ebe5d; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(37,211,102,0.3); }
+    .btn-wa svg { width: 18px; height: 18px; }
+
+    /* ─── GALLERY ─── */
+    .gallery { background: var(--white); }
+    .gallery-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
+    .gallery-tab {
+      background: transparent; border: 1.5px solid var(--gold-pale);
+      color: var(--charcoal-light); padding: 10px 22px; border-radius: 50px;
+      cursor: pointer; font-size: 13px; font-weight: 600; transition: all 0.2s;
+    }
+    .gallery-tab.active, .gallery-tab:hover {
+      background: var(--burgundy); border-color: var(--burgundy); color: var(--white);
+    }
+    .gallery-grid {
+      columns: 3; gap: 16px;
+    }
+    .gallery-item {
+      break-inside: avoid; margin-bottom: 16px;
+      border-radius: 12px; overflow: hidden;
+      background: linear-gradient(135deg, var(--blush), var(--gold-pale));
+      cursor: pointer; position: relative;
+      transition: transform 0.3s; box-shadow: 0 2px 12px rgba(109,31,43,0.08);
+    }
+    .gallery-item:hover { transform: scale(1.02); }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      transition: transform 0.32s cubic-bezier(.22,.61,.36,1), box-shadow 0.24s;
+    }
+    .gallery-item.tall img { height: 280px; }
+    .gallery-item.short img { height: 180px; }
+    .gallery-item.medium img { height: 220px; }
+    .gallery-overlay {
+      position: absolute; inset: 0; background: rgba(109,31,43,0.7);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 24px;
+      z-index: 2;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox-overlay {
+      position: fixed; inset: 0; z-index: 99999;
+      background: rgba(44,19,25,0.92);
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.2s;
+      opacity: 1;
+      animation: fadeIn 0.22s;
+    }
+    .lightbox-img-wrap {
+      position: relative; max-width: 92vw; max-height: 92vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-img {
+      max-width: 100%; max-height: 80vh; border-radius: 18px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.28);
+      background: #fff;
+      object-fit: contain;
+      transition: box-shadow 0.22s;
+      display: block;
+    }
+    .lightbox-close {
+      position: absolute; top: -40px; right: 0;
+      color: #fff; background: rgba(44,19,25,0.7);
+      border: none; border-radius: 50%; width: 38px; height: 38px;
+      font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+      z-index: 2;
+    }
+    .lightbox-close:hover { background: rgba(109,31,43,0.9); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* ─── PACKAGES ─── */
+    .packages { background: var(--ivory); }
+    .packages-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px;
+    }
+    .package-card {
+      border-radius: 24px; overflow: hidden; position: relative;
+      box-shadow: 0 8px 30px rgba(109,31,43,0.08); transition: transform 0.3s;
+    }
+    .package-card:hover { transform: translateY(-6px); }
+    .package-card.featured { transform: scale(1.03); box-shadow: 0 20px 60px rgba(109,31,43,0.2); }
+    .package-card.featured:hover { transform: scale(1.03) translateY(-4px); }
+    .package-header { padding: 32px 28px; text-align: center; }
+    .package-card.silver .package-header { background: linear-gradient(135deg, #C0C0C0, #E8E8E8); }
+    .package-card.gold .package-header { background: linear-gradient(135deg, var(--gold), var(--gold-light)); }
+    .package-card.premium .package-header { background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy)); }
+    .package-card.custom .package-header { background: linear-gradient(135deg, #2C3E50, #4A6274); }
+    .package-icon { font-size: 40px; margin-bottom: 12px; }
+    .package-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; }
+    .package-card.silver .package-name { color: #444; }
+    .package-card.gold .package-name { color: var(--burgundy-dark); }
+    .package-card.premium .package-name, .package-card.custom .package-name { color: var(--white); }
+    .package-price { font-size: 14px; margin-top: 6px; opacity: 0.8; }
+    .package-card.silver .package-price { color: #666; }
+    .package-card.gold .package-price { color: var(--burgundy); }
+    .package-card.premium .package-price, .package-card.custom .package-price { color: rgba(255,255,255,0.8); }
+    .package-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: var(--gold); color: var(--burgundy-dark);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 4px 12px; border-radius: 50px;
+    }
+    .package-body { background: var(--white); padding: 28px; }
+    .package-features { list-style: none; margin-bottom: 24px; }
+    .package-features li {
+      font-size: 13px; color: var(--charcoal-light); padding: 8px 0;
+      border-bottom: 1px solid var(--ivory-dark); display: flex; align-items: center; gap: 10px;
+    }
+    .package-features li::before { content: '✓'; color: var(--gold); font-weight: 700; font-size: 14px; flex-shrink: 0; }
+
+    /* ─── WHY US ─── */
+    .whyus { background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy)); }
+    .whyus .section-title, .whyus .section-label { color: var(--gold-light); }
+    .whyus .section-sub { color: rgba(255,255,255,0.7); }
+    .reasons-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px;
+    }
+    .reason-card {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(200,155,60,0.2);
+      border-radius: 16px; padding: 28px;
+      transition: all 0.3s; backdrop-filter: blur(4px);
+    }
+    .reason-card:hover { background: rgba(255,255,255,0.12); border-color: rgba(200,155,60,0.4); transform: translateY(-4px); }
+    .reason-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+    .reason-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .reason-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+    /* ─── REVIEWS ─── */
+    .reviews { background: var(--ivory-dark); }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;
+    }
+    .review-card {
+      background: var(--white); border-radius: 20px; padding: 28px;
+      box-shadow: 0 4px 20px rgba(109,31,43,0.06);
+      border: 1px solid var(--gold-pale); transition: transform 0.3s;
+    }
+    .review-card:hover { transform: translateY(-4px); }
+    .review-stars { color: #FFB800; font-size: 18px; margin-bottom: 16px; letter-spacing: 2px; }
+    .review-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 20px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--burgundy), var(--blush-deep));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-weight: 700; font-size: 16px; flex-shrink: 0;
+    }
+    .review-name { font-size: 14px; font-weight: 700; color: var(--burgundy); }
+    .review-event { font-size: 12px; color: var(--charcoal-light); }
+
+    /* ─── CONTACT ─── */
+    .contact { background: var(--white); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    }
+    .contact-info-block { display: flex; flex-direction: column; gap: 24px; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px; background: var(--ivory); border-radius: 16px;
+      border-left: 3px solid var(--gold);
+    }
+    .contact-item-icon { font-size: 24px; flex-shrink: 0; }
+    .contact-item-label { font-size: 11px; color: var(--charcoal-light); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+    .contact-item-value { font-size: 16px; font-weight: 600; color: var(--burgundy); text-decoration: none; }
+    .contact-item-value:hover { text-decoration: underline; }
+    .contact-hours { font-size: 13px; color: var(--charcoal-light); line-height: 1.6; }
+
+    .map-embed {
+      background: var(--ivory-dark); border-radius: 16px; overflow: hidden;
+      height: 300px; display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+      border: 2px solid var(--gold-pale);
+      flex-direction: column; gap: 0;
+      padding: 0;
+      position: relative;
+    }
+    .map-embed iframe {
+      width: 100%; height: 100%; border: none;
+      display: block;
+    }
+    .map-embed p, .map-embed a, .map-embed span {
+      display: none !important;
+    }
+
+    .social-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+    .social-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 50px;
+      text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s;
+    }
+    .social-btn.instagram { background: linear-gradient(135deg, #E1306C, #833AB4); color: var(--white); }
+    .social-btn.facebook { background: #1877F2; color: var(--white); }
+    .social-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+
+    /* ─── FAQ ─── */
+    .faq { background: var(--ivory); }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--white); border-radius: 12px; overflow: hidden;
+      border: 1px solid var(--gold-pale);
+    }
+    .faq-q {
+      width: 100%; background: none; border: none;
+      padding: 20px 24px; text-align: left; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 15px; font-weight: 600; color: var(--burgundy);
+      transition: background 0.2s;
+    }
+    .faq-q:hover { background: var(--ivory); }
+    .faq-q .faq-arrow { font-size: 18px; transition: transform 0.3s; color: var(--gold); }
+    .faq-q.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s;
+      font-size: 14px; color: var(--charcoal-light); line-height: 1.7;
+      padding: 0 24px;
+    }
+    .faq-a.open { max-height: 200px; padding: 0 24px 20px; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--burgundy-dark); padding: 60px 24px 30px;
+      color: rgba(255,255,255,0.7);
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+      margin-bottom: 48px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(200,155,60,0.2);
+    }
+    .footer-brand-name { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 20px; }
+    .footer-col h4 { color: var(--gold-light); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+    .footer-bottom { text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); }
+    .footer-bottom span { color: var(--gold); }
+
+    /* ─── FLOATING BUTTONS ─── */
+    .floating-buttons {
+      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+      display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
+    }
+    .float-btn {
+      width: 54px; height: 54px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 22px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      transition: all 0.3s; position: relative;
+    }
+    .float-btn:hover { transform: scale(1.1); }
+    .float-btn.wa { background: #25D366; }
+    .float-btn.call { background: var(--burgundy); }
+    .float-btn.ig { background: linear-gradient(135deg, #E1306C, #833AB4); }
+    .float-tooltip {
+      position: absolute; right: 64px; background: var(--charcoal);
+      color: var(--white); padding: 6px 12px; border-radius: 8px;
+      font-size: 12px; white-space: nowrap; opacity: 0;
+      transition: opacity 0.2s; pointer-events: none; font-family: 'Inter', sans-serif;
+    }
+    .float-btn:hover .float-tooltip { opacity: 1; }
+
+    /* ─── STICKY MOBILE CTA ─── */
+    .mobile-sticky-cta {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+      background: var(--white); padding: 12px 16px;
+      box-shadow: 0 -4px 20px rgba(109,31,43,0.12);
+      gap: 10px;
+    }
+    .mobile-sticky-cta .btn-wa, .mobile-sticky-cta .btn-call {
+      flex: 1; padding: 14px; border-radius: 12px;
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .mobile-sticky-cta .btn-call {
+      background: var(--burgundy); color: var(--white);
+    }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .fade-in {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; gap: 48px; padding: 60px 20px; }
+      .hero-visual { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .gallery-grid { columns: 2; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 64px 16px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .gallery-grid { columns: 2; }
+      .mobile-sticky-cta { display: flex; }
+      body { padding-bottom: 80px; }
+      .floating-buttons { bottom: 96px; right: 16px; }
+      .float-btn { width: 48px; height: 48px; font-size: 18px; }
+      .hero-stats { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .packages-grid { grid-template-columns: 1fr; }
+      .package-card.featured { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">🐘</div>
+      <div class="nav-logo-text">
+        <div class="brand">Shree Siddhi Vinayak</div>
+        <div class="tagline">Events • Dombivali</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <!-- <li><a href="#gallery">Gallery</a></li> -->
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://wa.me/918433781436?text=Hi%2C%20I%27d%20like%20to%20book%20an%20event%20decoration.%20Please%20share%20details." target="_blank" class="nav-cta">📲 Book Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <!-- <a href="#gallery" onclick="closeMobile()">Gallery</a> -->
+  <a href="#reviews" onclick="closeMobile()">Reviews</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="https://wa.me/918433781436?text=Hi%2C%20I%27d%20like%20to%20book%20an%20event%20decoration." target="_blank" style="color:#25D366;font-weight:700;">📲 Book on WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="eyebrow">Premium Event Decoration • Dombivali</div>
+      <h1>We Decorate Memories <em>You Cherish Forever</em></h1>
+      <p class="subhead">From intimate birthdays to grand corporate events — every moment crafted with love, balloons & golden elegance.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/918433781436?text=Hi%2C%20I%27d%20like%20to%20book%20an%20event%20decoration.%20Please%20share%20details." target="_blank" class="btn-primary">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.1 1.508 5.829L.057 23.776a.5.5 0 0 0 .62.62l5.945-1.45C8.385 23.941 10.155 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.787 0-3.477-.463-4.95-1.273l-.35-.203-3.63.885.902-3.543-.22-.363A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a href="#gallery" class="btn-outline">✨ View Gallery</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-number">500+</div><div class="stat-label">Events Done</div></div>
+        <div class="stat"><div class="stat-number">9+</div><div class="stat-label">Event Types</div></div>
+        <div class="stat"><div class="stat-number">5★</div><div class="stat-label">Rating</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card" style="position:relative;">
+        <div class="hero-decoration-grid">
+          <div class="hero-main-img">
+            <img
+              src="https://images.unsplash.com/photo-1758870041148-31d28fdf34d9?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Luxury birthday balloon decoration with floral backdrop"
+              class="img-zoom"
+              style="width:100%;height:100%;object-fit:cover;" />
+            <div class="hero-image-overlay"></div>
+          </div>
+          <div class="hero-side-img">
+            <img
+              src="https://images.unsplash.com/photo-1591203281954-23fa2ff8ef18?q=80&w=2352&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Premium event stage decoration with elegant florals"
+              class="img-zoom"
+              style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="hero-side-img">
+            <img
+              src="https://images.unsplash.com/photo-1751257741300-23ac727692d0?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Elegant floral engagement ceremony backdrop"
+              class="img-zoom"
+              style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual fade-in">
+        <div class="about-logo-display">
+          <!-- <img
+            src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+            loading="lazy"
+            alt="Elegant floral event stage decoration"
+            class="about-logo-img img-zoom"
+          /> -->
+          <div class="about-logo-name">Shree Siddhi<br>Vinayak Events</div>
+          <div class="about-logo-sub">Plan · Organize · Celebrate</div>
+        </div>
+        <div class="about-badge-row">
+          <div class="about-badge">📍 Dombivali</div>
+          <div class="about-badge">📞 8433781436</div>
+          <div class="about-badge">📱 @s.s.v._events</div>
+        </div>
+      </div>
+      <div class="about-text fade-in fade-in-delay-1">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Turning Moments Into Memories</h2>
+        <p>At Shree Siddhi Vinayak Events, we believe every celebration deserves to be extraordinary. Based in Dombivali, we've been crafting unforgettable event decorations for families, couples, and organizations across the region.</p>
+        <p>From elaborate balloon arches and custom themes to elegant stage setups and surprise decorations — our team pours passion into every detail so you can focus entirely on celebrating.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-title">🎨 Custom Themes</div>
+            <div class="pillar-desc">Every event is unique. We design themes tailored to your vision.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title">⏰ On-Time Setup</div>
+            <div class="pillar-desc">We arrive early, set up perfectly, and leave your venue spotless.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title">💰 Fair Pricing</div>
+            <div class="pillar-desc">Premium quality decoration at packages that suit every budget.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title">🤝 Full Support</div>
+            <div class="pillar-desc">From planning to execution, we're with you every step.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS WE COVER -->
+<section class="events" id="events">
+  <div class="section-inner">
+    <div class="section-header" style="text-align:center">
+      <div class="section-label" style="justify-content:center">What We Do</div>
+      <h2 class="section-title" style="text-align:center">We Decorate All Types of Events</h2>
+    </div>
+    <div class="events-grid">
+      <div class="event-chip fade-in"><span class="chip-icon">🎂</span><div class="chip-name">Birthday</div></div>
+      <div class="event-chip fade-in fade-in-delay-1"><span class="chip-icon">👶</span><div class="chip-name">Baby Shower</div></div>
+      <div class="event-chip fade-in fade-in-delay-2"><span class="chip-icon">💍</span><div class="chip-name">Engagement</div></div>
+      <div class="event-chip fade-in"><span class="chip-icon">💑</span><div class="chip-name">Anniversary</div></div>
+      <div class="event-chip fade-in fade-in-delay-1"><span class="chip-icon">🏠</span><div class="chip-name">Housewarming</div></div>
+      <div class="event-chip fade-in fade-in-delay-2"><span class="chip-icon">🎊</span><div class="chip-name">Grand Opening</div></div>
+      <div class="event-chip fade-in"><span class="chip-icon">🕉️</span><div class="chip-name">Religious Events</div></div>
+      <div class="event-chip fade-in fade-in-delay-1"><span class="chip-icon">🏢</span><div class="chip-name">Corporate Events</div></div>
+      <div class="event-chip fade-in fade-in-delay-2"><span class="chip-icon">🎓</span><div class="chip-name">School Events</div></div>
+      <div class="event-chip fade-in"><span class="chip-icon">🎁</span><div class="chip-name">Surprise Setup</div></div>
+      <div class="event-chip fade-in fade-in-delay-1"><span class="chip-icon">🎈</span><div class="chip-name">Balloon Decoration</div></div>
+      <div class="event-chip fade-in fade-in-delay-2"><span class="chip-icon">💫</span><div class="chip-name">Custom Events</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Decoration Packages<br>For Every Celebration</h2>
+      <p class="section-sub">Each service is customized to your theme, space, and budget. Book directly on WhatsApp for instant quotes.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+
+<!--
+
+
+
+
+<!-- WHY CHOOSE US -->
+<section class="whyus" id="whyus">
+  <div class="section-inner">
+    <div class="section-header" style="text-align:center">
+      <div class="section-label" style="justify-content:center;color:var(--gold-light)">Why Us</div>
+      <h2 class="section-title" style="text-align:center;color:var(--white)">Why Families &amp; Businesses<br>Trust Us</h2>
+    </div>
+    <div class="reasons-grid" id="reasonsGrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">What Our Clients Say</h2>
+    </div>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="section-header" style="text-align:center">
+      <div class="section-label" style="justify-content:center">FAQ</div>
+      <h2 class="section-title" style="text-align:center">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Book Your Event Today</h2>
+      <p class="section-sub">We typically respond within 30 minutes on WhatsApp. Call or message us for packages and availability.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-block">
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Call Us</div>
+            <a href="tel:+918433781436" class="contact-item-value">+91 8433781436</a><br>
+            <a href="tel:+919321754631" class="contact-item-value">+91 9321754631</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">💬</div>
+          <div>
+            <div class="contact-item-label">WhatsApp</div>
+            <a href="https://wa.me/918433781436?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20event%20decoration." target="_blank" class="contact-item-value">Message on WhatsApp →</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value" style="font-size:14px;color:var(--charcoal)">Dombivali, Maharashtra</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div>
+            <div class="contact-item-label">Business Hours</div>
+            <div class="contact-hours">
+              Mon – Sat: 9:00 AM – 9:00 PM<br>
+              Sunday: 10:00 AM – 6:00 PM
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="contact-item-label" style="margin-bottom:12px;font-size:11px;color:var(--charcoal-light);text-transform:uppercase;letter-spacing:0.1em">Follow Us</div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/ssv_events__dombivali/" target="_blank" class="social-btn instagram">📸 @s.s.v._events</a>
+            <a href="https://wa.me/918433781436" target="_blank" class="social-btn" style="background:#25D366;color:white">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="map-embed" aria-label="Google Map showing Dombivli, Maharashtra">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.518043256025!2d73.0867086149025!3d19.2183300870051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be795f2c3e02d7f%3A0x9c3b6a8e42d5d9e2!2sDombivli%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1683111111111!5m2!1sen!2sin"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map of Dombivli, Maharashtra"
+          ></iframe>
+        </div>
+        <div style="margin-top:24px;background:var(--ivory);border-radius:16px;padding:28px;border:1px solid var(--gold-pale)">
+          <h3 style="font-family:'Playfair Display',serif;color:var(--burgundy);margin-bottom:16px;font-size:20px">Send a Quick Enquiry</h3>
+          <p style="font-size:13px;color:var(--charcoal-light);margin-bottom:20px">Pick your event type and we'll send you a custom package:</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <select id="enquiryType" style="padding:12px 16px;border-radius:10px;border:1.5px solid var(--gold-pale);font-size:14px;color:var(--charcoal);background:white;outline:none;font-family:'Inter',sans-serif">
+              <option value="">Select Event Type…</option>
+              <option value="Birthday">🎂 Birthday Decoration</option>
+              <option value="Baby Shower">👶 Baby Shower</option>
+              <option value="Engagement">💍 Engagement</option>
+              <option value="Anniversary">💑 Anniversary</option>
+              <option value="Housewarming">🏠 Housewarming</option>
+              <option value="Corporate Event">🏢 Corporate Event</option>
+              <option value="Grand Opening">🎊 Grand Opening</option>
+              <option value="Religious Event">🕉️ Religious Event</option>
+              <option value="Surprise Setup">🎁 Surprise Setup</option>
+            </select>
+            <button onclick="sendEnquiry()" class="btn-wa" style="padding:14px;font-size:15px;border:none;cursor:pointer">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.1 1.508 5.829L.057 23.776a.5.5 0 0 0 .62.62l5.945-1.45C8.385 23.941 10.155 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.787 0-3.477-.463-4.95-1.273l-.35-.203-3.63.885.902-3.543-.22-.363A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Get a Free Quote on WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">🐘 Shree Siddhi Vinayak Events</div>
+        <div class="footer-tagline">We decorate memories you cherish forever. Premium event decoration services in Dombivali, Maharashtra.</div>
+        <a href="https://wa.me/918433781436?text=Hi%2C%20I%27d%20like%20to%20book%20an%20event%20decoration." target="_blank" class="btn-wa" style="display:inline-flex;width:auto;padding:12px 24px">💬 WhatsApp Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Birthday Decoration</a></li>
+          <li><a href="#services">Baby Shower</a></li>
+          <li><a href="#services">Engagement</a></li>
+          <li><a href="#services">Anniversary</a></li>
+          <li><a href="#services">Corporate Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <!-- <li><a href="#gallery">Gallery</a></li> -->
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+918433781436">📞 8433781436</a></li>
+          <li><a href="tel:+919321754631">📞 9321754631</a></li>
+          <li><a href="https://wa.me/918433781436" target="_blank">💬 WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/ssv_events__dombivali/" target="_blank">📸 @s.s.v._events</a></li>
+          <li><a href="#">📍 Dombivali, MH</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Shree Siddhi Vinayak Events. All rights reserved. Made with <span>♥</span> in Dombivali.
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-buttons">
+  <a href="https://www.instagram.com/ssv_events__dombivali/" target="_blank" class="float-btn ig">
+    📸<div class="float-tooltip">Instagram</div>
+  </a>
+  <a href="tel:+918433781436" class="float-btn call">
+    📞<div class="float-tooltip">Call Now</div>
+  </a>
+  <a href="https://wa.me/918433781436?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20event%20decoration." target="_blank" class="float-btn wa">
+    💬<div class="float-tooltip">WhatsApp</div>
+  </a>
+</div>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky-cta">
+  <a href="tel:+918433781436" class="btn-call">📞 Call</a>
+  <a href="https://wa.me/918433781436?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20event%20decoration." target="_blank" class="btn-wa">💬 WhatsApp Us</a>
+</div>
+
+<script>
+// ─── DATA ───
+const services = [
+  {
+    icon: '🎂',
+    title: 'Birthday Decoration',
+    desc: 'From princess themes to superhero setups — we create magical birthday moments for all ages.',
+    tags: ['Balloon Arch', 'Custom Theme', 'Stage', 'LED Backdrop'],
+    wa: 'Birthday%20Decoration',
+    image: 'https://plus.unsplash.com/premium_photo-1692880429643-c0f3c9489046?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    icon: '👶',
+    title: 'Baby Shower',
+    desc: 'Soft, pastel, and dreamy setups celebrating the arrival of your little one.',
+    tags: ['Pastel Theme', 'Floral Decor', 'Photo Booth'],
+    wa: 'Baby%20Shower%20Decoration',
+    image: 'https://images.unsplash.com/photo-1625990462521-a09e6b880d50?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    icon: '💍',
+    title: 'Engagement Decoration',
+    desc: 'Romantic floral arches, ring ceremony stages, and elegant settings for your special "yes" moment.',
+    tags: ['Floral Arch', 'Stage Setup', 'Lighting'],
+    wa: 'Engagement%20Decoration',
+    image: 'https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    icon: '💑',
+    title: 'Anniversary Decoration',
+    desc: 'Rekindle the magic with personalized decor, flower walls, and intimate dinner setups.',
+    tags: ['Flower Wall', 'Candle Setup', 'Custom Banners'],
+    wa: 'Anniversary%20Decoration',
+    image: 'https://images.unsplash.com/photo-1612145463153-e97c1774fe2a?q=80&w=2290&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    icon: '🏠',
+    title: 'Housewarming',
+    desc: 'Traditional and modern housewarming setups with floral entrances and auspicious decoration.',
+    tags: ['Entrance Decor', 'Traditional', 'Floral'],
+    wa: 'Housewarming%20Decoration',
+    image: 'https://plus.unsplash.com/premium_photo-1729040401790-d9a6de88feeb?q=80&w=2318&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    icon: '🏢',
+    title: 'Corporate Events',
+    desc: 'Professional backdrop setups, branding integration, and elegant décor for conferences and launches.',
+    tags: ['Backdrop', 'Branding', 'Professional'],
+    wa: 'Corporate%20Event%20Decoration',
+    image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    icon: '🎊',
+    title: 'Grand Opening',
+    desc: 'Make your business launch unforgettable with ribbon ceremonies, arch decor, and vibrant setups.',
+    tags: ['Balloon Arch', 'Ribbon Setup', 'Signage'],
+    wa: 'Grand%20Opening%20Decoration',
+    image: 'https://images.unsplash.com/photo-1642349318072-a4caabd88cf0?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    icon: '🕉️',
+    title: 'Religious Events',
+    desc: 'Respectful and beautiful decoration for poojas, naming ceremonies, and religious celebrations.',
+    tags: ['Traditional', 'Floral', 'Respectful'],
+    wa: 'Religious%20Event%20Decoration',
+    image: 'https://images.unsplash.com/photo-1699637568981-4a79d177e025?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  }
+];
+
+const galleryCategories = ['All', 'Birthday', 'Baby Shower', 'Engagement', 'Corporate', 'Housewarming'];
+const galleryItems = [
+  {
+    cat: 'Birthday',
+    image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
+    size: 'tall',
+    alt: 'Birthday party balloon arch with pastel colors'
+  },
+  {
+    cat: 'Baby Shower',
+    image: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80',
+    size: 'short',
+    alt: 'Baby shower pastel balloon setup with floral decor'
+  },
+  {
+    cat: 'Engagement',
+    image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
+    size: 'medium',
+    alt: 'Engagement floral arch decoration with elegant backdrop'
+  },
+  {
+    cat: 'Birthday',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
+    size: 'short',
+    alt: 'Birthday party theme table setup with balloons and flowers'
+  },
+  {
+    cat: 'Corporate',
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80',
+    size: 'tall',
+    alt: 'Corporate event stage decor with branding backdrop'
+  },
+  {
+    cat: 'Housewarming',
+    image: 'https://images.unsplash.com/photo-1503389152951-9c3d8b6b09b0?auto=format&fit=crop&w=600&q=80',
+    size: 'medium',
+    alt: 'Housewarming floral entrance with traditional decor'
+  },
+  {
+    cat: 'Baby Shower',
+    image: 'https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=600&q=80',
+    size: 'tall',
+    alt: 'Baby shower balloon arch and pastel decorations'
+  },
+  {
+    cat: 'Birthday',
+    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80',
+    size: 'medium',
+    alt: 'Birthday party cake table with balloons and gold decor'
+  },
+  {
+    cat: 'Engagement',
+    image: 'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80',
+    size: 'short',
+    alt: 'Engagement ceremony floral backdrop and stage'
+  },
+  {
+    cat: 'Corporate',
+    image: 'https://images.unsplash.com/photo-1515168833906-d2a3b82b1a48?auto=format&fit=crop&w=600&q=80',
+    size: 'medium',
+    alt: 'Corporate grand opening balloon arch and ribbon decor'
+  },
+  {
+    cat: 'Housewarming',
+    image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80',
+    size: 'short',
+    alt: 'Housewarming flower decor and pooja setup'
+  },
+  {
+    cat: 'Birthday',
+    image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
+    size: 'tall',
+    alt: 'Birthday party ribbon and balloon decoration'
+  }
+];
+
+const packages = [
+  {
+    tier:'silver', icon:'🥈', name:'Silver Package', price:'Starting ₹3,000',
+    badge: null,
+    features:['Balloon Decoration','Basic Theme Setup','Small Balloon Arch','3–4 Hours Setup','Welcome Message Banner','1 Photo Corner']
+  },
+  {
+    tier:'gold', icon:'🌟', name:'Gold Package', price:'Starting ₹6,000',
+    badge:'Most Popular',
+    features:['Premium Balloon Arrangement','Custom Theme Decoration','LED Backdrop / Neon Sign','Stage Setup','Flower & Foil Balloons','Lighting Setup','2 Photo Corners','5 Hours Setup']
+  },
+  {
+    tier:'premium', icon:'👑', name:'Premium Package', price:'Starting ₹12,000',
+    badge:'Best Value',
+    features:['Full Venue Transformation','Custom Luxury Theme','Premium LED + Neon Lights','Flower Wall / Balloon Canopy','Professional Stage','Entrance Decoration','3 Photo Corners','On-site Decoration Manager','8 Hours Setup']
+  },
+  {
+    tier:'custom', icon:'✨', name:'Custom Package', price:'Price On Request',
+    badge:null,
+    features:['Fully Customized Design','Your Theme & Vision','Any Scale — Intimate to Grand','Custom Props & Signage','Mixed Decoration Types','Special Requests Welcome','WhatsApp to Discuss']
+  }
+];
+
+const reasons = [
+  { icon:'🎨', title:'Customized Themes', desc:'Every event gets a unique theme designed around your preferences and occasion.' },
+  { icon:'💰', title:'Affordable Packages', desc:'Premium decoration without premium prices. Options for every budget.' },
+  { icon:'⏰', title:'On-Time Setup', desc:'We arrive early and set up completely before your guests arrive — always.' },
+  { icon:'👥', title:'Professional Team', desc:'Our trained decorators handle everything with care, precision, and creativity.' },
+  { icon:'🎈', title:'Premium Balloons', desc:'We use only high-quality, long-lasting balloons and decoration materials.' },
+  { icon:'📋', title:'Complete Event Management', desc:'From planning to teardown, we manage the entire decoration lifecycle for you.' },
+  { icon:'📱', title:'Easy WhatsApp Booking', desc:'Chat with us, share your ideas, get a quote, and confirm — all on WhatsApp.' },
+  { icon:'⭐', title:'5-Star Reputation', desc:'Trusted by hundreds of families and businesses across Dombivali.' },
+];
+
+const reviews = [
+  { stars:5, text:'Absolutely stunning birthday setup for my daughter\'s first birthday! The balloon arch and neon backdrop were exactly what I dreamed of. The team was on time and so professional.', name:'Priya Sharma', event:'1st Birthday Decoration', avatar:'P' },
+  { stars:5, text:'Our engagement ceremony looked like a fairytale. The floral arch and lighting setup were breathtaking. Everyone kept asking who did the decoration. Highly recommend!', name:'Rahul & Sneha', event:'Engagement Decoration', avatar:'R' },
+  { stars:5, text:'We hired them for our corporate product launch and they were exceptional. Clean, professional, and perfectly branded decoration. Will definitely use again.', name:'Vivek Patil', event:'Corporate Event', avatar:'V' },
+  { stars:5, text:'The surprise decoration for my husband\'s anniversary was set up while we were out and it was magical when we returned. Beautiful, within budget, and stress-free!', name:'Anita Desai', event:'Anniversary Surprise', avatar:'A' },
+  { stars:5, text:'Baby shower decoration was too cute! Pastel theme, floral arrangements, and the "Oh Baby" neon light — everything was perfect. All guests loved it!', name:'Meera Joshi', event:'Baby Shower Decoration', avatar:'M' },
+  { stars:5, text:'Housewarming pooja decoration was done very beautifully with traditional flowers and elegant entrance decor. Team was helpful and respectful of our space.', name:'Suresh & Family', event:'Housewarming Ceremony', avatar:'S' },
+];
+
+const faqs = [
+  { q:'How far in advance should I book?', a:'We recommend booking at least 5–7 days in advance for standard decorations. For large events like weddings or corporate events, 2–4 weeks ahead is ideal to ensure availability and proper planning.' },
+  { q:'Do you travel outside Dombivali?', a:'Yes! We cover nearby areas including Kalyan, Thane, Navi Mumbai, and surrounding regions. Travel charges may apply depending on the distance. Contact us to confirm.' },
+  { q:'Can I see decoration samples before booking?', a:'Absolutely. You can view our portfolio on Instagram (@s.s.v._events) and we\'re happy to share mood boards and reference images over WhatsApp while discussing your event.' },
+  { q:'What happens if I need to cancel or reschedule?', a:'We understand things change. If you need to reschedule, please contact us at least 48 hours in advance. Our cancellation and rescheduling terms will be discussed during booking.' },
+  { q:'Do you offer a balloon-only or simple setup option?', a:'Yes! We have basic balloon decoration packages starting from ₹1,500. Whether it\'s a small corner setup or a full balloon arch, we have options for all budgets.' },
+  { q:'How long does setup take?', a:'Setup typically takes 2–4 hours depending on the package and venue size. Premium packages may require 6–8 hours. We always complete setup before your event begins.' },
+];
+
+// ─── RENDER SERVICES ───
+function renderServices() {
+  const grid = document.getElementById('servicesGrid');
+  grid.innerHTML = services.map(s => `
+    <div class="service-card fade-in">
+      <div class="service-img">
+        <img src="${s.image}" loading="lazy" alt="${s.title} sample decoration" class="img-zoom" />
+      </div>
+      <div class="service-body">
+        <div class="service-title">${s.title}</div>
+        <div class="service-desc">${s.desc}</div>
+        <div class="service-tags">${s.tags.map(t=>`<span class="service-tag">${t}</span>`).join('')}</div>
+        <a href="https://wa.me/918433781436?text=Hi%2C%20I%27m%20interested%20in%20${s.wa}.%20Please%20share%20packages." target="_blank" class="btn-wa" aria-label="Book ${s.title} on WhatsApp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.1 1.508 5.829L.057 23.776a.5.5 0 0 0 .62.62l5.945-1.45C8.385 23.941 10.155 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.787 0-3.477-.463-4.95-1.273l-.35-.203-3.63.885.902-3.543-.22-.363A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Book Now
+        </a>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── RENDER GALLERY ───
+let activeCategory = 'All';
+function renderGallery() {
+  const tabs = document.getElementById('galleryTabs');
+  tabs.innerHTML = galleryCategories.map(c => `
+    <button class="gallery-tab ${c===activeCategory?'active':''}" onclick="setGalleryTab('${c}')" aria-label="Show ${c} gallery">${c}</button>
+  `).join('');
+
+  const filtered = activeCategory === 'All' ? galleryItems : galleryItems.filter(i => i.cat === activeCategory);
+  const grid = document.getElementById('galleryGrid');
+  grid.innerHTML = filtered.map((item, idx) => `
+    <div class="gallery-item ${item.size}" tabindex="0" onclick="openLightbox(${idx})" aria-label="Open preview for ${item.alt}">
+      <img src="${item.image}" loading="lazy" alt="${item.alt}" class="img-zoom" />
+    </div>
+  `).join('');
+  window._currentGallery = filtered;
+}
+function setGalleryTab(cat) {
+  activeCategory = cat;
+  renderGallery();
+}
+
+// ─── LIGHTBOX ───
+function openLightbox(idx) {
+  const items = window._currentGallery || galleryItems;
+  const item = items[idx];
+  if (!item) return;
+  // Remove existing lightbox if any
+  closeLightbox();
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.tabIndex = 0;
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', item.alt);
+  overlay.innerHTML = `
+    <div class="lightbox-img-wrap">
+      <img src="${item.image}" alt="${item.alt}" class="lightbox-img" />
+      <button class="lightbox-close" aria-label="Close image" onclick="closeLightbox()">&times;</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  setTimeout(()=>{ overlay.focus(); }, 10);
+  // Close on click outside image
+  overlay.addEventListener('click', function(e){
+    if (e.target === overlay) closeLightbox();
+  });
+  // Close on Escape key
+  function keyHandler(e) {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  }
+  overlay._lightboxKeyHandler = keyHandler;
+  document.addEventListener('keydown', keyHandler);
+}
+function closeLightbox() {
+  const overlay = document.querySelector('.lightbox-overlay');
+  if (overlay) {
+    document.removeEventListener('keydown', overlay._lightboxKeyHandler || (()=>{}));
+    overlay.remove();
+  }
+}
+
+// ─── RENDER PACKAGES ───
+function renderPackages() {
+  const grid = document.getElementById('packagesGrid');
+  if (!grid) return;
+  grid.innerHTML = packages.map(p => `
+    <div class="package-card ${p.tier} ${p.tier==='gold'?'featured':''}">
+      ${p.badge ? `<div class="package-badge">${p.badge}</div>` : ''}
+      <div class="package-header">
+        <div class="package-icon">${p.icon}</div>
+        <div class="package-name">${p.name}</div>
+        <div class="package-price">${p.price}</div>
+      </div>
+      <div class="package-body">
+        <ul class="package-features">
+          ${p.features.map(f=>`<li>${f}</li>`).join('')}
+        </ul>
+        <a href="https://wa.me/918433781436?text=Hi%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(p.name)}.%20Please%20share%20details." target="_blank" class="btn-wa">💬 Book This Package</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── RENDER WHY US ───
+function renderReasons() {
+  document.getElementById('reasonsGrid').innerHTML = reasons.map(r => `
+    <div class="reason-card fade-in">
+      <span class="reason-icon">${r.icon}</span>
+      <div class="reason-title">${r.title}</div>
+      <div class="reason-desc">${r.desc}</div>
+    </div>
+  `).join('');
+}
+
+// ─── RENDER REVIEWS ───
+function renderReviews() {
+  document.getElementById('reviewsGrid').innerHTML = reviews.map(r => `
+    <div class="review-card fade-in">
+      <div class="review-stars">${'★'.repeat(r.stars)}</div>
+      <div class="review-text">"${r.text}"</div>
+      <div class="review-author">
+        <div class="review-avatar">${r.avatar}</div>
+        <div>
+          <div class="review-name">${r.name}</div>
+          <div class="review-event">${r.event}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── RENDER FAQ ───
+function renderFAQ() {
+  document.getElementById('faqList').innerHTML = faqs.map((f,i) => `
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(${i})">
+        ${f.q}
+        <span class="faq-arrow">▾</span>
+      </button>
+      <div class="faq-a" id="faq-${i}">${f.a}</div>
+    </div>
+  `).join('');
+}
+function toggleFAQ(idx) {
+  const btn = document.querySelectorAll('.faq-q')[idx];
+  const ans = document.getElementById('faq-'+idx);
+  btn.classList.toggle('open');
+  ans.classList.toggle('open');
+}
+
+// ─── ENQUIRY ───
+function sendEnquiry() {
+  const type = document.getElementById('enquiryType').value;
+  if (!type) { alert('Please select an event type first!'); return; }
+  const msg = encodeURIComponent(`Hi, I'm interested in ${type}. Please share packages and availability.`);
+  window.open(`https://wa.me/918433781436?text=${msg}`, '_blank');
+}
+
+// ─── SCROLL ANIMATIONS ───
+function initScrollAnim() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+}
+
+// ─── NAVBAR SCROLL ───
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// ─── HAMBURGER ───
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+function closeMobile() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ─── INIT ───
+renderServices();
+// renderGallery();
+renderReasons();
+renderReviews();
+renderFAQ();
+setTimeout(initScrollAnim, 100);
+</script>
+</body>
+</html>
