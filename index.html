@@ -649,8 +649,52 @@
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .footer-col ul li a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; transition: color 0.2s; }
     .footer-col ul li a:hover { color: var(--gold-light); }
-    .footer-bottom { text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); }
-    .footer-bottom span { color: var(--gold); }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 8px;
+    }
+
+    .footer-credit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .credit-separator {
+      opacity: 0.35;
+    }
+
+    .idelyze-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .idelyze-logo {
+      height: 20px;
+      width: auto;
+      opacity: 0.8;
+      transition: opacity .25s ease, transform .25s ease;
+    }
+
+    .idelyze-logo:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width:640px){
+      .footer-credit{
+        flex-direction:column;
+        gap:8px;
+      }
+      .credit-separator{
+        display:none;
+      }
+    }
 
     /* ─── FLOATING BUTTONS ─── */
     .floating-buttons {
@@ -1073,7 +1117,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      © 2025 Shree Siddhi Vinayak Events. All rights reserved. Made with <span>♥</span> in Dombivali.
+      <div class="footer-credit">
+        <span>© 2025 Shree Siddhi Vinayak Events. All Rights Reserved.</span>
+        <span class="credit-separator">•</span>
+        <span>Designed &amp; Developed by</span>
+        <a href="https://idelyze.com" target="_blank" rel="noopener noreferrer" class="idelyze-link" aria-label="Idelyze">
+          <img src="idelyze.svg" alt="Idelyze" class="idelyze-logo">
+        </a>
+      </div>
     </div>
   </div>
 </footer>
